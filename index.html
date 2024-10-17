@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+    <head>
+        <title>Undangan Pernikahan</title>
+        <link rel="stylesheet" href="Assets/css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="Assets/image/favicon.ico"/>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.2/URI.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="cover" class="cover">
+            <img id="img-l-top" src="Assets/image/petal.png"><img id="img-r-top" src="Assets/image/petal.png">
+            <p>The Wedding Of</p>
+            <h1>Minho & Jisoo</h1>
+            <p id="date">12.9.2023</p>
+            <p class="tamu-a">Tamu Yang Terhormat</p>
+            <p class="tamu-t" id="guest-name"></p>
+            <div><a><button id="button" role="button" onclick="openInvitation(); playAudio()">Buka Undangan</button></a></div>
+        </div>
+        <div id="ray">
+            
+            <audio id="player" autoplay loop><source src="Assets/audio/lagu_nikah_korea.mp3" type="audio/mpeg"></audio>
+            
+            <div id="quotes">
+                <div id="ctrlmusik">
+                    <img onclick="playAudio()" id="imgmusik" src="Assets/image/icon_music.png">
+                </div>
+                
+                <div id="box" >
+                    <div class="txt-q">
+                        <h2 id="krn"> 사랑은 끝나지 않는다</h2>
+                        <p id="idn">"Cinta tidak pernah berakhir."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile">
+                <div id="p-1">
+                    <img class="p-i" src="Assets/image/korean_boy.jpeg">
+                    <div class="p-txt"><p>Minho</p></div>
+                    <div class="p-txt"><p>Yaya & Tomas</p></div>
+                    <a href="https://www.instagram.com/atlus_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="ig" src="Assets/image/ig_logo.jpeg"></a>
+                </div>
+                <br>
+                <div id="p-2">
+                    <img class="p-i" src="Assets/image/korean_girl.jpeg">
+                    <div class="p-txt"><p>Jisoo</p></div>
+                    <div class="p-txt"><p>Ko Ta & Rade Lau</p></div>
+                    <a href="https://www.instagram.com/pokemon/"><img class="ig" src="Assets/image/ig_logo.jpeg"></a>
+                </div>
+            </div>
+            
+            <div id="acara">
+                <img id="border" src="Assets/image/gold_border1.png">
+                <p class="a-txt">20 Desember 2024</p><br>
+                <p class="a-txt">Gambir,<br> Kecamatan Gambir,<br> Kota Jakarta Pusat, <br> Daerah Khusus<br> Ibukota Jakarta</p>
+                <img id="border" src="Assets/image/gold_border2.png">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666347494409!2d106.8245840251493!3d-6.175403010513725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2db8c5617%3A0x4e446b7ac891d847!2sMonas%2C%20Gambir%2C%20Kecamatan%20Gambir%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1726112491810!5m2!1sid!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div id="gallery">
+                <p>Video</p>
+                <video controls>
+                  <source src="Assets/video/bima_x.mp4" type="video/mp4">
+                </video>
+                
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/Me3-l3SAfo0" frameborder="0"></iframe>
+                
+                <p>Photo</p>
+                <img src="Assets/image/e1.jpeg">
+                <br>
+                <img src="Assets/image/e2.jpeg">
+                <br>
+                <img src="Assets/image/e3.jpeg"><br>
+            </div>
+            
+            <div id="table">
+                <p>Tamu</p>
+                <center>
+                <table>
+                    <tr>
+                        <td colspan="3">NAMA</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">KELUARGA</td>
+                        <td>Halilintar</td>
+                        <td>Forger</td>
+                    </tr>
+                    <tr>
+                        <td>Quo Na</td>
+                        <td>Mamang</td>
+                    </tr>
+                </center>
+                </table>
+            </div>
+            
+            <div id="RSVP">
+                <p>RSVP</p>
+                <form id="form">
+                    <div id="name">
+                        <label for="txtNama">Nama :</label>
+                        <input type="text" name="nama" id="nama"/>
+                    </div>
+                <br>
+                    <div id="kehadiran">
+                        <label for="kehadiran">Kehadirian :</label><br>
+                        <input type="radio" value="Hadir" name="kehadiran" id="kehadiran"/>
+                        <label for="kehadiran">Hadir</label><br>
+                        <input type="radio" value="Tidak Hadir" name="kehadiran" id="kehadiran"/>
+                        <label for="kehadiran">Tidak Hadir</label><br>
+                    </div>
+                <br>
+                    <div id="mangan">
+                        <label for="menu">Rekomendasi Makanan :</label><br>
+                        <input type="checkbox" value="pumpeng" name="menu" id="mknnasgor"/>
+                        <label for="mknnasgor">Tumpeng</label><br>
+                        <input type="checkbox" value="pudding" name="menu" id="mnmsup"/>
+                        <label for="mnmsup">Pudding</label><br>
+                        <input type="checkbox" value="salad" name="menu" id="mknsalad"/>
+                        <label for="mknsalad">Salad</label><br>
+                        <input type="checkbox" value="ice" name="menu" id="mknice"/>
+                        <label for="mknice">Ice Cream</label>
+                    </div>
+                <br>
+                    <div id="anggota">
+                        <label for="menu">Jumlah orang yang datang dari keluarga anda:</label>
+                        <select id="keluarga" name="keluarga">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                <br>
+                    <div id="pesan">
+                        <h4>Pesan Tambahan:</h4>
+                        <textarea name="message" rows="10" cols="30"></textarea><br>
+                        <input id="submit" type="submit">
+                    </div>
+                </form>
+            </div>
+            <div id="bg-story">
+                <p>STORY</p>
+                <div id="story">
+                    <img src="Assets/image/boyxgirl.jpeg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <div id="hadiah">
+                <p>KIRIM HADIAH</p>
+                <img src="Assets/image/qr_code.jpg">
+                <p id="rekening">No Rek : 8543920179 <br><button onclick="copyText()">Salin No. Rekening</button></p>
+            </div>
+
+            <div id="doa">
+                <p>Pesan dan Doa</p>
+                <form>
+                    <div id="pd">
+                        <input type="text" placeholder="Nama">
+                        <br><br>
+                        <input type="text" placeholder="Alamat">
+                        <br><br>
+                        <input type="text" placeholder="Pesan dan Doa"></input>
+                    
+
+                        <input  id="kirim" type="submit">
+
+                    </div>
+                </form>
+            </div>
+
+            <div id="trims">
+                <p> Kami Sangat Mengharapkan Kehadiran Anda Pada Acara Nikahan Kami</p>
+            </div>
+
+        <div id="nav">
+            <ul>
+                <a href="#profile"><li><img src="Assets/image/icon_profile.png"></li></a>
+                <a href="#acara"><li><img src="Assets/image/icon_time_location.png"></li></a>
+                <a href="#gallery"><li><img src="Assets/image/icon_camera.png"></li></a>
+                <a href="#RSVP"><li><img src="Assets/image/icon_sign.png"></li></a>
+                <a href="#hadiah"><li><img src="Assets/image/icon_kado.png"></li></a>
+            </ul>
+        </div>
+
+        </div>
+    </body>
+
+
+
+</html>
